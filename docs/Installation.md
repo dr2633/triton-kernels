@@ -29,11 +29,31 @@ Go to Google Colab and create a new notebook.
 - Set **Hardware accelerator to GPU**, then click **Save**.
 
 
+**Note:** Google Colab often provides NVIDIA T4 GPUs, which are compatible with Triton and ideal for running practice experiments. The T4 GPU has ample memory and compute power for experimenting with Triton kernels, making it suitable for learning and small-scale testing.
+
 **Install Triton in Colab:**
 In the first cell of your Colab notebook, run the following command to install Triton:
 
 ```python
 !pip install triton
 ```
+
+**4. Verify the Installation**
+
+After installing, you can run a simple command to verify the installation: 
+
+```python
+import triton 
+print("Triton version:", triton.__version__)
+```
+
+**5. Run Triton Code**
+
+With your installation verified, you're now ready to start using Triton! 
+
+You can write Triton kernels or run existing scripts directly within the Colab environment. 
+
+
+
 
 
