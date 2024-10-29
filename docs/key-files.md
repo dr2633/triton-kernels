@@ -45,7 +45,7 @@ A key benefit of this approach is that it leads to block-structured iteration sp
 _Compare Triton and CUDA -- provide visualization of block-structured iteration spaces with indexing_
 
 
-### Challenges and Tritan Implementation of Block-Level Data-Flow Analysis 
+### Challenges and Triton Implementation of Block-Level Data-Flow Analysis 
 
 The main challenge posed by our proposed paradigm is that of work scheduling, i.e., how the work done by each program instance should be partitioned for efficient execution on modern GPUs. To address this issue, the Triton compiler makes heavy use of block-level data-flow analysis, a technique for scheduling iteration blocks statically based on the control- and data-flow structure of the target program. The resulting system actually works surprisingly well: our compiler manages to apply a broad range of interesting optimization automatically (e.g., automatic coalescing, thread swizzling, pre-fetching, automatic vectorization, tensor core-aware instruction selection, shared memory allocation/synchronization, asynchronous copy scheduling). Of course doing all this is not trivial; one of the purposes of this guide is to give you a sense of how it works.
 

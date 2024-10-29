@@ -16,12 +16,13 @@ This document provides definitions and explanations of essential Triton function
 - **Example**:
 
 
-  ```python
+    ```python
 import triton
+
 @triton.jit
 def my_kernel():
 # Kernel code here
-  ```
+```
 
 #### `tl.arange`
 
@@ -30,8 +31,9 @@ def my_kernel():
 - **Example**:
 
   ```python
+  
 x = tl.arange(0, 1024)
- ```
+```
 
 ### `tl.load`
 - **Description**: Loads data from memory into the kernel with optional masking to handle out-of-bounds indices.
