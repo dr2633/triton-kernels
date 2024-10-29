@@ -14,12 +14,14 @@ This document provides definitions and explanations of essential Triton function
 - **Description**: The `@triton.jit` decorator compiles Python functions into GPU kernels, enabling parallel execution on the GPU.
 - **Purpose**: This decorator is central to Triton, allowing users to write GPU-compatible code in Python, which is then just-in-time (JIT) compiled for efficient execution on NVIDIA GPUs.
 - **Example**:
-```python
-    import triton
-    @triton.jit
-    def my_kernel():
-        # Kernel code here
- ```
+
+
+  ```python
+import triton
+@triton.jit
+def my_kernel():
+# Kernel code here
+  ```
 
 #### `tl.arange`
 
@@ -27,7 +29,7 @@ This document provides definitions and explanations of essential Triton function
 - **Purpose**: This function is essential for indexing and looping within GPU kernels, enabling control over data processing at the GPU core level.
 - **Example**:
 
-```python
+  ```python
 x = tl.arange(0, 1024)
  ```
 
@@ -35,17 +37,19 @@ x = tl.arange(0, 1024)
 - **Description**: Loads data from memory into the kernel with optional masking to handle out-of-bounds indices.
 - **Purpose**: Efficiently brings data from global memory into the kernel, which is important for optimizing memory usage and avoiding out-of-bounds errors.
 - **Example**:
-```python
+  
+  ```python
 data = tl.load(ptr, mask=index < length)
-```
+  ```
 
 
 ### `tl.store`
 - **Description**: Stores data from the kernel back to global memory.
 - **Purpose**: Used for writing output data to memory, `tl.store` is essential for saving the results of computations performed in the kernel.
 - **Example**:
-    ```python
-    tl.store(ptr_out, data)
+
+  ```python
+tl.store(ptr_out, data)
     ```
 
 ## Key Concepts in GPU Optimization
