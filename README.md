@@ -21,22 +21,65 @@ Each notebook is structured to progressively build on the previous, covering con
 ### Notebooks
 Each notebook has links to run in Google Colab for immediate experimentation with GPU access.
 
-1. **01_GPU_Intro_and_Elementwise_Operations**: [Colab](https://colab.research.google.com/github/yourusername/yourrepo/blob/main/notebooks/01_GPU_Intro_and_Elementwise_Operations.ipynb) | [GitHub](notebooks/01_GPU_Intro_and_Elementwise_Operations.ipynb)
-   - **Objective**: Introduces basic GPU concepts, Triton setup, and elementwise operations.
 
-2. **02_Fused_Operations_and_Memory_Optimization**: [Colab](https://colab.research.google.com/github/yourusername/yourrepo/blob/main/notebooks/02_Fused_Operations_and_Memory_Optimization.ipynb) | [GitHub](notebooks/02_Fused_Operations_and_Memory_Optimization.ipynb)
-   - **Objective**: Explores fused operations and memory optimization.
 
-3. **03_Softmax_Optimization_and_Memory_Reuse**: [Colab](https://colab.research.google.com/github/yourusername/yourrepo/blob/main/notebooks/03_Softmax_Optimization_and_Memory_Reuse.ipynb) | [GitHub](notebooks/03_Softmax_Optimization_and_Memory_Reuse.ipynb)
-   - **Objective**: Implements softmax with memory reuse.
 
-4. **04_Matrix_Multiplication_with_Blocking_and_Tiling**: [Colab](https://colab.research.google.com/github/yourusername/yourrepo/blob/main/notebooks/04_Matrix_Multiplication_with_Blocking_and_Tiling.ipynb) | [GitHub](notebooks/04_Matrix_Multiplication_with_Blocking_and_Tiling.ipynb)
-   - **Objective**: Demonstrates matrix multiplication with tiling strategies.
+#### 1. **01_GPU_Intro_and_Elementwise_Operations.ipynb** [Colab](https://colab.research.google.com/drive/1-B-j2b6yoNGwHLCKD_b_lwOvz2vzal9t) | [GitHub](notebooks/01_GPU_Intro_and_Elementwise_Operations.ipynb)
+   - **Objective**: Introduce foundational GPU concepts and set up Triton for basic operations.
+   - **Content**:
+      - Overview of GPU architecture, including data movement, parallel processing, and the Triton installation process.
+      - Simple Triton kernel example for elementwise addition.
+   - **Goal**: Acquaint users with Triton’s syntax and introduce essential GPU programming principles.
 
-5. **05_Custom_Loss_Functions_and_Backpropagation_in_Triton** (Advanced): [Colab](https://colab.research.google.com/github/yourusername/yourrepo/blob/main/notebooks/05_Custom_Loss_Functions_and_Backpropagation_in_Triton.ipynb) | [GitHub](notebooks/05_Custom_Loss_Functions_and_Backpropagation_in_Triton.ipynb)
-   - **Objective**: Develops custom loss functions and backpropagation.
+#### 2. **02_Fused_Operations_and_Memory_Optimization.ipynb** [Colab](https://colab.research.google.com/drive/1rkWMP0dG4ZYeCumA48hg_3vbBbaeSBQN) | [GitHub](notebooks/02_Fused_Operations_and_Memory_Optimization.ipynb)
+   - **Objective**: Demonstrate kernel fusion and its impact on performance.
+   - **Content**:
+      - Explanation of kernel fusion’s efficiency benefits.
+      - Example of a fused add-multiply operation and performance comparison with PyTorch.
+   - **Goal**: Show how reducing memory transfers through kernel fusion can improve computational efficiency.
 
----
+#### 3. **03_Softmax_Optimization_and_Memory_Reuse.ipynb**  [Colab](https://colab.research.google.com/drive/1ZSDma4wqbP5AgpC_sLEgZW-8aRwkZj1j) | [GitHub](notebooks/03_Softmax_Optimization_and_Memory_Reuse.ipynb)
+   - **Objective**: Implement and optimize a fused softmax operation with memory reuse techniques.
+   - **Content**:
+      - Techniques for minimizing redundant memory accesses.
+      - Benchmarking fused softmax to demonstrate memory and performance gains.
+   - **Goal**: Showcase memory optimization strategies for computationally intensive deep learning operations.
+
+#### 4. **04_Quantization_and_Inference_Optimizations.ipynb**
+   - **Objective**: Optimize inference-time performance using quantization techniques.
+   - **Content**:
+      - Explanation of quantization and its advantages for memory footprint and speed.
+      - Implementing a quantized matrix multiplication in Triton.
+      - Benchmarking quantized Triton kernels against PyTorch (CUDA) for real-time inference.
+   - **Goal**: Highlight how Triton’s optimized quantization can benefit applications in human-AI interaction, robotics, and real-time AI model reasoning.
+
+#### 5. **05_Matrix_Multiplication_with_Blocking_and_Tiling.ipynb**
+   - **Objective**: Implement optimized matrix multiplication using blocking and tiling techniques.
+   - **Content**:
+      - Explanation of tiling strategies to optimize data locality and parallelism.
+      - Performance comparison with PyTorch to demonstrate Triton’s handling of large matrix multiplications.
+   - **Goal**: Demonstrate how Triton can improve large matrix multiplication performance by managing data locality and GPU parallelism.
+
+#### 6. **06_RLHF_User_Preference_Based_Model_Tuning.ipynb**
+   - **Objective**: Implement user-preference-based tuning for Reinforcement Learning from Human Feedback (RLHF) workflows.
+   - **Content**:
+      - Example of user preference processing (e.g., selecting between two model outputs).
+      - Iterative model tuning based on user feedback data.
+   - **Goal**: Show how Triton’s efficient computation can enable responsive, real-time model adjustments based on user preferences, a core aspect of RLHF.
+
+#### 7. **07_Custom_Loss_Functions_and_Backpropagation.ipynb**
+   - **Objective**: Provide an advanced guide to creating custom loss functions and backpropagation routines in Triton.
+   - **Content**:
+      - Develop custom loss functions suitable for Triton.
+      - Implement backpropagation routines, optimized for custom training workflows.
+   - **Goal**: Demonstrate Triton’s versatility in end-to-end neural network training, showcasing custom loss functions and backpropagation for optimized, application-specific deep learning.
+
+
+
+
+
+
+
 
 ## Installation Instructions
 
