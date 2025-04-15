@@ -152,19 +152,3 @@ def add_kernel(x_ptr, y_ptr, output_ptr, n_elements, BLOCK_SIZE: tl.constexpr):
     tl.store(output_ptr + offsets, output, mask=mask)
 ```
 This sample kernel performs elementwise addition of two vectors and highlights Triton’s syntax and parallelization capabilities.
-
----
-
-## Project Goals 
-
-The Triton GPU Optimization Tutorials are designed to:
-
-- **Introduce Core GPU Programming Concepts**: Provide an interactive introduction to GPU architecture and parallel computing principles, setting a strong foundation for advanced optimization techniques.
-
-- **Showcase Practical Applications via Google Colab**: Enable seamless onboarding through Google Colab, allowing users to experiment with Triton and GPU optimization on accessible, cloud-based hardware—no setup or GPU required locally.
-
-- **Demonstrate Triton’s Capabilities for High-Performance Kernels**: Showcase how to leverage Triton to develop custom kernels, comparing them against PyTorch (CUDA) to highlight performance differences.
-
-- **Equip Users with Practical Optimization Skills for Deep Learning**: Guide users through real-world scenarios, enabling hands-on experimentation with Triton for tasks such as vector addition, fused operations, and memory management strategies.
-
-- **Encourage Experimentation and Tuning**: Offer insights on optimizing block sizes, memory access patterns, and kernel fusion to help users maximize GPU performance in deep learning workflows.
