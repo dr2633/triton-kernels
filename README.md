@@ -34,6 +34,9 @@ Each notebook has links to run in Google Colab for immediate experimentation wit
       - Example of a fused add-multiply operation and performance comparison with PyTorch.
    - **Goal**: Show how reducing memory transfers through kernel fusion can improve computational efficiency.
 
+<img src="figs/benchmark.png" width="600">
+
+
 #### 3. **03_Softmax_Optimization_and_Memory_Reuse.ipynb**  [Colab](https://colab.research.google.com/drive/1ZSDma4wqbP5AgpC_sLEgZW-8aRwkZj1j) | [GitHub](notebooks/03_Softmax_Optimization_and_Memory_Reuse.ipynb)
    - **Objective**: Implement and optimize a fused softmax operation with memory reuse techniques.
    - **Content**:
